@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Passei</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sua fonte de noticias universitárias">
+    <meta name="author" content="Diego Almeida de Aguiar">
+
+    <!-- Le styles -->
+    <link href="bootstrap/docs/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap/docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="bootstrap/docs/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="bootstrap/docs/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="bootstrap/docs/assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="bootstrap/docs/assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="bootstrap/docs/assets/ico/apple-touch-icon-57-precomposed.png">
+    <script data-main="js/main" src="js/libs/require/require.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="row-fluid">
+        <div class="navbar span12">
+          <div class="navbar-inner">
+            <div class="container">
+              <div class="nav-collapse">
+                <form class="navbar-search pull-right" action="">
+                  <input type="text" class="search-query span12" placeholder="Buscar">
+                </form>
+              </div>
+              <a class="brand" href="#">Passei</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span2">&nbsp;</div>
+        <div id="myCarousel" class="carousel slide span8 well">
+          <div class="carousel-inner">
+            <div class="item active">
+              <img src="images/Banner.gif" alt="">
+              <div class="carousel-caption">
+                <h4>Passei.com</h4>
+                <p>Seu portal universitário de prestigio</p>
+              </div>
+            </div>
+          </div>
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <aside class="span2">
+          <form class="well">
+            <div class="accordion" id="accordion2">
+              <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#turismo">
+                      Turismo
+                    </a>
+                  </div>
+                <div id="turismo" class="accordion-body collapse" style="height: 0px; ">
+                  <div class="accordion-inner">
+                    <ul class="nav nav-list">
+                        <li class="active">
+                          <a href="#turismo/intercambio">Intercâmbio</a>
+                        </li>
+                        <li>
+                          <a href="#turismo/formatura">Formaturas</a>
+                        </li>
+                        <li>
+                          <a href="#turismo/nacional">Viagens Nacionais</a>
+                        </li>
+                        <li>
+                          <a href="#turismo/cursosinternacionais">Cursos Rápidos Internacionais</a>
+                        </li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#estagio">
+                      Estágios
+                    </a>
+                  </div>
+                <div id="estagio" class="accordion-body collapse" style="height: 0px; ">
+                  <div class="accordion-inner">
+                    <ul class="nav nav-list">
+                        <li class="active">
+                          <a href="#estagio/primeiro">Primeiro Estágio</a>
+                        </li>
+                        <li>
+                          <a href="#estagio/comportamento">Dicas de Comportamento</a>
+                        </li>
+                        <li>
+                          <a href="#estagio/vagas">Vagas</a>
+                        </li>
+                        <li>
+                          <a href="#estagio/dicascv">Aperfeiçoe seu CV</a>
+                        </li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#evento">
+                      Eventos         
+                    </a>
+                  </div>
+                <div id="evento" class="accordion-body collapse" style="height: 0px; ">
+                  <div class="accordion-inner">
+                    <ul class="nav nav-list">
+                        <li class="active">
+                          <a href="#evento/festas">Festas Universitárias</a>
+                        </li>
+                        <li>
+                          <a href="#evento/atletica">Atléticas</a>
+                        </li>
+                        <li>
+                          <a href="#evento/esportes">Esportes</a>
+                        </li>
+                        <li>
+                          <a href="#evento/palestras">Palestras</a>
+                        </li>
+                        <li>
+                          <a href="#evento/filantropia">Filantropia</a>
+                        </li>
+                        <li>
+                          <a href="#evento/shows">Shows</a>
+                        </li>
+                        <li>
+                          <a href="#evento/culturais">Culturais</a>
+                        </li>
+                        <li>
+                          <a href="#evento/Calendario">Calendário</a>
+                        </li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#vestibular">
+                      Vestibular         
+                    </a>
+                  </div>
+                <div id="vestibular" class="accordion-body collapse" style="height: 0px; ">
+                  <div class="accordion-inner">
+                    <ul class="nav nav-list">
+                        <li class="active">
+                          <a href="#vestibular/cursos">Cursos</a>
+                        </li>
+                        <li>
+                          <a href="#vestibular/correcaoProvas">Correção de provas</a>
+                        </li>
+                        <li>
+                          <a href="#vestibular/dicasConcentracao">Dicas de concentração</a>
+                        </li>
+                        <li>
+                          <a href="#vestibular/materias">Matérias</a>
+                        </li>
+                        <li>
+                          <a href="#vestibular/instituicoes">Instituições</a>
+                        </li>
+                        <li>
+                          <a href="#vestibular/peparacao">Como se preparar</a>
+                        </li>
+                        <li>
+                          <a href="#vestibular/calendario">Calendário</a>
+                        </li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#republica">
+                      Republica         
+                    </a>
+                  </div>
+                <div id="republica" class="accordion-body collapse" style="height: 0px; ">
+                  <div class="accordion-inner">
+                    <ul class="nav nav-list">
+                        <li class="active">
+                          <a href="#republica/sozinho">Morando Sozinho</a>
+                        </li>
+                        <li>
+                          <a href="#republica/vagas">Há Vagas</a>
+                        </li>
+                        <li>
+                          <a href="#republica/procuraVagas">Procuram-se Vagas</a>
+                        </li>
+                        <li>
+                          <a href="#republica/oQueFazerQuando">O que fazer quando</a>
+                        </li>
+                        <li>
+                          <a href="#republica/manhee">Manhêeee</a>
+                        </li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#bolsas">
+                      B. de Estudo         
+                    </a>
+                  </div>
+                <div id="bolsas" class="accordion-body collapse" style="height: 0px; ">
+                  <div class="accordion-inner">
+                    <ul class="nav nav-list">
+                        <li class="active">
+                          <a href="#bolsas/prouni">Pro Uni</a>
+                        </li>
+                        <li>
+                          <a href="#bolsas/instituicoes">Instituições</a>
+                        </li>
+                        <li>
+                          <a href="#bolsas/cursinhos">Cursinhos</a>
+                        </li>
+                        <li>
+                          <a href="#bolsas/calendario">Calendário</a>
+                        </li>
+                        <li>
+                          <a href="#bolsas/escolasIngles">Escolas de Inglês</a>
+                        </li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#comportamento">
+                      Comportamento         
+                    </a>
+                  </div>
+                <div id="comportamento" class="accordion-body collapse" style="height: 0px; ">
+                  <div class="accordion-inner">
+                    <ul class="nav nav-list">
+                        <li class="active">
+                          <a href="#comportamento/moda">Moda e Estilo</a>
+                        </li>
+                        <li>
+                          <a href="#comportamento/bemEstar">Bem Estar</a>
+                        </li>
+                        <li>
+                          <a href="#comportamento/naTv">Na TV</a>
+                        </li>
+                        <li>
+                          <a href="#comportamento/facaVoceMesmo">Faça você mesmo</a>
+                        </li>
+                        <li>
+                          <a href="#comportamento/horoscopo">Horóscopo</a>
+                        </li>
+                      </ul>
+                  </div>
+                </div>
+              </div>   
+            </div>
+          </form>
+        </aside>
+        
+        <section class="span8">
+          <form class="well">
+            <h1>Passei, e agora!!</h1>
+            <p>News</p>
+          </form>
+        </section>
+
+        <aside class="span2">
+          <form class="well">
+            Novidades!!
+          </form>
+        </aside>
+      </div>
+    </div>
+
+    <footer>
+      <a href="#contato">Contato</a>
+      <a href="#equipe">Equipe</a>
+    </footer>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="bootstrap/docs/assets/js/jquery.js"></script><!--
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>-->
+    <script src="bootstrap/docs/assets/js/bootstrap-collapse.js"></script>
+    <script src="bootstrap/docs/assets/js/bootstrap-carousel.js"></script>
+    <script src="bootstrap/docs/assets/js/bootstrap-typeahead.js"></script>
+    <script type="text/javascript">
+      $('.carousel').carousel({
+        interval: 2000,
+        pause:'hover'
+      })
+    </script>
+  </body>
+</html>

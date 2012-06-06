@@ -1,0 +1,15 @@
+define(
+	'js/controllers/homeController',
+	[
+		'jquery',
+		'underscore',
+		'backbone'
+	],
+	function($,_,Backbone){
+		var homeController = Backbone.Router.extend({
+			initialize:function(){
+				console.log('Home');
+			}
+		})
+	}
+)

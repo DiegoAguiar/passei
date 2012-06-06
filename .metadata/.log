@@ -301,3 +301,13 @@ org.osgi.service.prefs.BackingStoreException: Exception saving preferences to: /
 	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.doSave(ProfilePreferences.java:137)
 	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences$SaveJob.run(ProfilePreferences.java:49)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2012-06-05 18:11:41.070 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_20
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -data C:\Users\Passei\Documents\workspace\passei -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.epp.usagedata.recording 1 0 2012-06-05 19:45:13.456
+!MESSAGE Usage data uploaded to http://udc.eclipse.org/upload.php in 4062 milliseconds.

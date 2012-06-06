@@ -2,14 +2,13 @@
 define([
   'jquery',
   'underscore',
-  'backbone',
-  'controllers/turismoController'
+  'backbone'
   
-], function($, _, Backbone, turismoController){
+], function($, _, Backbone){
   var AppRouter = Backbone.Router.extend({
     routes: {
       //Rotas do menu lateral
-      
+      '' : 'homeController',
       'turismo/:option' : 'turismoController'
     }
   });
@@ -20,9 +19,12 @@ define([
   };
 
   AppRouter.prototype.turismoController =function(options){
-      this.controller = new turismoController();
-      this.controller.initialize();
+      
   };
+
+  AppRouter.prototype.homeController = function(){
+    console.log('home');
+  }
 
   return {
     initialize: initialize

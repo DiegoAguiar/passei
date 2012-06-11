@@ -2,9 +2,10 @@
 define([
   'jquery',
   'underscore',
-  'backbone'
+  'backbone',
+  'js/view/home/main.js'
   
-], function($, _, Backbone){
+], function($, _, Backbone,homeView){
   var AppRouter = Backbone.Router.extend({
     routes: {
       //Rotas do menu lateral
@@ -23,7 +24,8 @@ define([
   };
 
   AppRouter.prototype.homeController = function(){
-    console.log('home');
+    home = new homeView();
+    home.render();
   }
 
   return {

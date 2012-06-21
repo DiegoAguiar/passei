@@ -1,0 +1,51 @@
+@CHARSET "ISO-8859-1";
+.home{
+	background-color: #3D79B7;
+}
+.turismo{
+	background-color: #D3BB1B;
+}
+.estagio{
+	background-color: #B73D4A;
+}
+.evento{
+	background-color: #A0C8D2;
+}
+.vestibular{
+	background-color: #746489;
+}
+.republica{
+	background-color: #9AB7D7;
+}
+.bolsa{
+	background-color: #879B56;
+}
+.comportamento{
+	background-color: #27B4DF;
+}
+.servico{
+	background-color: #C2BCA2;
+}
+.economia{
+	background-color: #B5ABC4;
+}
+.casts{
+	background-color: #BF2D20;
+}
+.universidade{
+	background-color: #E59F61;
+}
+.extracurricular{
+	background-color: #D1A19F;
+}
+#lmenu a{
+	font-size: 15px;
+	font-weight: 900;
+	color: white;
+}
+.nav > li > a:hover{
+	background: url("/passei/images/transparencia.png");
+}
+body{
+	background-color: #EBEBEB; 
+}

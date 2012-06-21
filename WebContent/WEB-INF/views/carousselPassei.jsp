@@ -10,6 +10,13 @@
 				<p>Seu portal universitário de prestigio.</p>
 			</div>
 		</div>
+		<div class="item">
+			<img src="https://lh4.googleusercontent.com/-EuenE09Afes/T7qKSbaMYJI/AAAAAAAACnE/fU4AOHBkaDM/s800/DSC03330.JPG" width="65%"/>
+			<div class="carousel-caption">
+				<h4>Metodisney</h4>
+				<p>Descubra como foi por quem foi</p>
+			</div>
+		</div>
 	</div>
 	<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
 	<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>

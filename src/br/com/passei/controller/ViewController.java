@@ -6,8 +6,12 @@ import java.util.ArrayList;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 import br.com.passei.dao.MenuDao;
+import br.com.passei.dao.PostagemDao;
 import br.com.passei.main.MenuLateral;
+import br.com.passei.main.Postagem;
 
 @Controller
 public class ViewController {
@@ -22,9 +26,16 @@ public class ViewController {
 	@RequestMapping("/lMenu")
 	public String executeLmenu(Model model) throws SQLException, ClassNotFoundException{
 		MenuDao dao = new MenuDao();
-		ArrayList<MenuLateral> menu = new ArrayList<MenuLateral>();
-		menu=dao.getAllMenu();
+		ArrayList<MenuLateral> menu = dao.getAllMenu();
 		model.addAttribute("menu", menu);
 		return "lMenu";
+	}
+	@RequestMapping("/conteudo")
+	public String executeConteudo(Model model,@RequestParam String assunto) throws ClassNotFoundException, SQLException{
+		System.out.println(assunto);
+		PostagemDao dao = new PostagemDao();
+		ArrayList<Postagem> conteudo = dao.getAllPostagemPorAssunto(assunto);
+		model.addAttribute("conteudo",conteudo);
+		return "conteudo";
 	}
 }

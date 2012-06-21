@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -14,6 +13,7 @@
 <link href="bootstrap/docs/assets/css/bootstrap.css" rel="stylesheet">
 <link href="bootstrap/docs/assets/css/bootstrap-responsive.css"
 	rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
 
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -33,7 +33,7 @@
 </head>
 
 <body>
-	<header>
+	<header class="home">
 		<div class="row-fluid">
 			<div class="navbar span12">
 				<div class="navbar-inner">
@@ -53,41 +53,53 @@
 	</header>
 
 	<div class="container-fluid">
+		<br>
+		<br>
 		<div class="row-fluid">
-			<aside class="span2" id="lmenu">
-				
-			</aside>
+			<aside class="span2" id="lmenu"></aside>
 
-			<section class="span8">
-				<form class="well">
+			<section class="span8" id="section">
+				<form>
 					<h1>Passei, e agora!!</h1>
 					<p>News</p>
 				</form>
 			</section>
 
 			<aside class="span2">
-				<form class="well">Novidades!!</form>
+				<form>Novidades!!</form>
 			</aside>
 		</div>
 	</div>
 
 	<footer>
-		<a href="#contato">Contato</a> <a href="#equipe">Equipe</a>
+		<div class="row-fluid">
+			<div class="navbar span12">
+				<div class="navbar-inner">
+					<div class="container">
+						<ul class="nav">
+							<li><a href="#contato">Contato</a></li>
+							<li><a href="#equipe">Equipe</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 	</footer>
 
 	<!-- Le javascript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="bootstrap/docs/assets/js/jquery.js"></script>
-    <script src="bootstrap/docs/assets/js/bootstrap-transition.js"></script>
-    <script src="bootstrap/docs/assets/js/bootstrap-alert.js"></script>
-    <script src="bootstrap/docs/assets/js/bootstrap-modal.js"></script>
-    <script src="bootstrap/docs/assets/js/bootstrap-dropdown.js"></script>
-    <script src="bootstrap/docs/assets/js/bootstrap-scrollspy.js"></script>
-    <script src="bootstrap/docs/assets/js/bootstrap-tab.js"></script>
-    <script src="bootstrap/docs/assets/js/bootstrap-tooltip.js"></script>
-    <script src="bootstrap/docs/assets/js/bootstrap-popover.js"></script>
-    <script src="bootstrap/docs/assets/js/bootstrap-button.js"></script>
+	<script src="js/jquery.livequery.js"></script>
+	<script src="bootstrap/docs/assets/js/bootstrap-transition.js"></script>
+	<script src="bootstrap/docs/assets/js/bootstrap-alert.js"></script>
+	<script src="bootstrap/docs/assets/js/bootstrap-modal.js"></script>
+	<script src="bootstrap/docs/assets/js/bootstrap-dropdown.js"></script>
+	<script src="bootstrap/docs/assets/js/bootstrap-scrollspy.js"></script>
+	<script src="bootstrap/docs/assets/js/bootstrap-tab.js"></script>
+	<script src="bootstrap/docs/assets/js/bootstrap-tooltip.js"></script>
+	<script src="bootstrap/docs/assets/js/bootstrap-popover.js"></script>
+	<script src="bootstrap/docs/assets/js/bootstrap-button.js"></script>
 	<script src="bootstrap/docs/assets/js/bootstrap-collapse.js"></script>
 	<script src="bootstrap/docs/assets/js/bootstrap-carousel.js"></script>
 	<script src="bootstrap/docs/assets/js/bootstrap-typeahead.js"></script>

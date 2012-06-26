@@ -19,6 +19,22 @@ $(document).ready(function(){
 		$('#lmenu').html(content);
 	});
 	
+	$.ajax({
+		url : 'conteudoHome',
+		cache : false,
+		type : 'GET'
+	}).done(function(content) {
+		$('#section').html(content);
+	});
+	
+	$.ajax({
+		url : 'novidades',
+		cache : false,
+		type : 'GET'
+	}).done(function(content) {
+		$('#novidade').html(content);
+	});
+	
 	$('.rota').livequery('click',function(){
 		var self = $(this);
 		$.ajax({
@@ -37,14 +53,25 @@ $(document).ready(function(){
 	
 	$('.home').livequery('click',function(){
 		$.ajax({
-			url : 'conteudo',
+			url : 'conteudoHome',
 			cache : false,
-			type : 'GET',
-			data : {assunto:'#home'}
+			type : 'GET'
 		}).done(function(content) {
 			$('li').attr('class','');
 			$('header').attr('class','home');
 			$('.brand').html('Home');
+			$('#section').html(content);
+		});
+	});
+	
+	$('.detalhamento').livequery('click',function(){
+		var self=$(this);
+		$.ajax({
+			url : 'detalhamento',
+			cache : false,
+			type : 'GET',
+			data : {idpostagem:self.attr('data-id')}
+		}).done(function(content) {
 			$('#section').html(content);
 		});
 	});

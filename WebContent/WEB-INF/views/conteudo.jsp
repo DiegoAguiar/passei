@@ -3,18 +3,24 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <c:if test="${not empty conteudo}">
-	<c:set var="tagAberta" value="0"/>
+	<c:set var="tagAberta" value="0" />
+	<c:set var="telse" value="0" />
 	<c:forEach items="${conteudo}" var="postagem">
 		<c:if test="${postagem.tipo == 12}">
 			<c:if test="${tagAberta == 1}">
 				</div>
-				<c:set var="tagAberta" value="0"/>
+				<c:set var="tagAberta" value="0" />
 			</c:if>
-			
+
 			<div class="row-fluid">
 				<div class="span${postagem.tipo}">
 					<h1>${postagem.titulo}</h1>
 					<p>${postagem.chamada}</p>
+					<p>
+						<a href="${postagem.tags}/${postagem.idpostagem}"
+							class="detalhamento" data-id="${postagem.idpostagem}">Continue
+							Lendo</a>
+					</p>
 				</div>
 			</div>
 		</c:if>
@@ -24,14 +30,32 @@
 					<div class="span${postagem.tipo}">
 						<h1>${postagem.titulo}</h1>
 						<p>${postagem.chamada}</p>
+						<p>
+							<a href="${postagem.tags}/${postagem.idpostagem}"
+								class="detalhamento" data-id="${postagem.idpostagem}">Continue
+								Lendo</a>
+						</p>
 					</div>
+					<c:set var="telse" value="1" />
 			</c:if>
 			<c:if test="${tagAberta == 1}">
-					<div class="span${postagem.tipo}">
-						<h1>${postagem.titulo}</h1>
-						<p>${postagem.chamada}</p>
-					</div>
+				<div class="span${postagem.tipo}">
+					<h1>${postagem.titulo}</h1>
+					<p>${postagem.chamada}</p>
+					<p>
+						<a href="${postagem.tags}/${postagem.idpostagem}"
+							class="detalhamento" data-id="${postagem.idpostagem}">Continue
+							Lendo</a>
+					</p>
 				</div>
+				</div>
+				<c:set var="telse" value="0" />
+			</c:if>
+			<c:if test="${telse == 1}">
+				<c:set var="tagAberta" value="1" />
+			</c:if>
+			<c:if test="${telse == 0}">
+				<c:set var="tagAberta" value="0" />
 			</c:if>
 		</c:if>
 	</c:forEach>

@@ -11,7 +11,7 @@ public class TesteListaPostagem {
 			SQLException {
 		PostagemDao dao = new PostagemDao();
 		ArrayList<Postagem> postagens = dao
-				.getAllPostagemPorAssunto("#casts/videocast");
+				.getAllPostagemPorAssunto("#turismo/intercambio");
 		for (Postagem postagem : postagens) {
 			System.out.println(postagem.getTitulo() + postagem.getChamada() + postagem.getTexto());
 		}

@@ -53,21 +53,16 @@
 	</header>
 
 	<div class="container-fluid">
-		<br>
-		<br>
+		<br> <br>
 		<div class="row-fluid">
 			<aside class="span2" id="lmenu"></aside>
 
 			<section class="span8" id="section">
-				<form>
-					<h1>Passei, e agora!!</h1>
-					<p>News</p>
-				</form>
+				<h1>Passei, e agora!!</h1>
+				<p>News</p>
 			</section>
 
-			<aside class="span2">
-				<form>Novidades!!</form>
-			</aside>
+			<aside class="span2" id="novidade"></aside>
 		</div>
 	</div>
 

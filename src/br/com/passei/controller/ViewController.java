@@ -30,12 +30,33 @@ public class ViewController {
 		model.addAttribute("menu", menu);
 		return "lMenu";
 	}
+	@RequestMapping("/conteudoHome")
+	public String executaConteudoHome(Model model) throws SQLException, ClassNotFoundException{
+		PostagemDao dao = new PostagemDao();
+		ArrayList<Postagem> conteudo= dao.getPostagemHome();
+		model.addAttribute("conteudo",conteudo);
+		return "conteudo";
+		
+	}
 	@RequestMapping("/conteudo")
 	public String executeConteudo(Model model,@RequestParam String assunto) throws ClassNotFoundException, SQLException{
-		System.out.println(assunto);
 		PostagemDao dao = new PostagemDao();
 		ArrayList<Postagem> conteudo = dao.getAllPostagemPorAssunto(assunto);
 		model.addAttribute("conteudo",conteudo);
 		return "conteudo";
+	}
+	@RequestMapping("/detalhamento")
+	public String executeDetalhamento(Model model, @RequestParam int idpostagem) throws ClassNotFoundException, SQLException{
+		PostagemDao dao = new PostagemDao();
+		ArrayList<Postagem> postagem = dao.getPostagemPorId(idpostagem);
+		model.addAttribute("postagem",postagem);
+		return "detalhamento";
+	}
+	@RequestMapping("/novidades")
+	public String executeNovidades(Model model) throws SQLException, ClassNotFoundException{
+		PostagemDao dao = new PostagemDao();
+		ArrayList<Postagem> postagens = dao.getNovidadesCasts();
+		model.addAttribute("novidades",postagens);
+		return "novidades";
 	}
 }

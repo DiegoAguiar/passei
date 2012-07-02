@@ -1,12 +1,14 @@
 package br.com.passei.main;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Postagem {
 	private String titulo, texto, tags, chamada;
 	private int tipo, idusuario, idpostagem;
 	private Date data;
-
+	private ArrayList<Comentario> comentarios;
+	
 	public Postagem(String titulo, String texto, String tags, int tipo,
 			int idusuario, int idpostagem, Date data) {
 		setTitulo(titulo);
@@ -17,6 +19,14 @@ public class Postagem {
 		setIdpostagem(idpostagem);
 		setData(data);
 		setChamada(texto.substring(texto.indexOf("<chamada>"), texto.lastIndexOf("</chamada>")).replaceAll("<chamada>|</chamada>", ""));
+	}
+
+	public ArrayList<Comentario> getComentarios() {
+		return comentarios;
+	}
+
+	public void setComentarios(ArrayList<Comentario> comentarios) {
+		this.comentarios = comentarios;
 	}
 
 	public String getTitulo() {

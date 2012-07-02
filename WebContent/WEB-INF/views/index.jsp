@@ -1,12 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="pt">
 <head>
 <meta charset="utf-8">
 <title>Passei</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Sua fonte de noticias universitárias">
+<meta name="description" content="Sua fonte de noticias universitÃ¡rias">
 <meta name="author" content="Diego Almeida de Aguiar">
 
 <!-- Le styles -->
@@ -21,8 +19,8 @@
     <![endif]-->
 
 <!-- Le fav and touch icons -->
-<link rel="shortcut icon" href="bootstrap/docs/assets/ico/favicon.ico">
-<link rel="apple-touch-icon-precomposed" sizes="144x144"
+<link rel="shortcut icon" href="images/favicon.png">
+<!-- <link rel="apple-touch-icon-precomposed" sizes="144x144"
 	href="bootstrap/docs/assets/ico/apple-touch-icon-144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114"
 	href="bootstrap/docs/assets/ico/apple-touch-icon-114-precomposed.png">
@@ -30,7 +28,7 @@
 	href="bootstrap/docs/assets/ico/apple-touch-icon-72-precomposed.png">
 <link rel="apple-touch-icon-precomposed"
 	href="bootstrap/docs/assets/ico/apple-touch-icon-57-precomposed.png">
-</head>
+ --></head>
 
 <body>
 	<header class="home">
@@ -72,7 +70,7 @@
 				<div class="navbar-inner">
 					<div class="container">
 						<ul class="nav">
-							<li><a href="#contato">Contato</a></li>
+							<li><a href="#contato" class="contato" data-toggle="modal">Contato</a></li>
 							<li><a href="#equipe">Equipe</a></li>
 						</ul>
 					</div>
@@ -80,6 +78,58 @@
 			</div>
 		</div>
 	</footer>
+
+	<div class="modal hide" id="contato">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">X</button>
+			<h3>Contato</h3>
+		</div>
+		<div class="modal-body">
+			<form action="formulario">
+				<div class="row-fluid">
+					<label>Tipo:*</label>
+					<select name="tipo" id="tipo" class="span7">
+						<optgroup label="Outros">
+							<option value="outros">Outros</option>
+						</optgroup>
+					</select>
+					<label>Nome:*</label>
+					<input type="text" name="nome" id="nome" maxlength="255" placeholder="Nome" class="span7">
+					<label>E-mail:*</label>
+					<input type="text" name="email" id="email" maxlength="255" placeholder="E-mail" class="span7">
+					<label>Mensagem:*</label>
+					<textarea name="mensagem" rows="5" id="mensagem" placeholder="Mensagem" class="span7"></textarea>
+				</div>
+			</form>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn" data-dismiss="modal">Fechar</a>
+			<a href="#" class="btn btn-primary" id="enviarEmail">Enviar</a>
+		</div>
+	</div>
+	
+	<div class="modal hide" id="comentario">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">X</button>
+			<h3>Novo Comentário</h3>
+		</div>
+		<div class="modal-body">
+			<form action="formulario">
+				<div class="row-fluid">
+					<label>Nome:*</label>
+					<input type="text" name="nome" id="nomeComentario" maxlength="255" placeholder="Nome" class="span7">
+					<label>E-mail:*</label>
+					<input type="text" name="email" id="emailComentario" maxlength="255" placeholder="E-mail" class="span7">
+					<label>Comentário:*</label>
+					<textarea name="mensagem" rows="5" id="mensagemComentario" placeholder="Comentário" class="span7"></textarea>
+				</div>
+			</form>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn" data-dismiss="modal">Cancelar</a>
+			<a href="#" class="btn btn-primary" id="enviarComentario">Enviar</a>
+		</div>
+	</div>
 
 	<!-- Le javascript
     ================================================== -->

@@ -14,7 +14,7 @@
 
 			<div class="row-fluid">
 				<div class="span${postagem.tipo}">
-					<h1>${postagem.titulo}</h1>
+					<h3>${postagem.titulo}</h3>
 					<p>${postagem.chamada}</p>
 					<p>
 						<a href="${postagem.tags}/${postagem.idpostagem}"
@@ -28,7 +28,7 @@
 			<c:if test="${tagAberta == 0}">
 				<div class="row-fluid">
 					<div class="span${postagem.tipo}">
-						<h1>${postagem.titulo}</h1>
+						<h3>${postagem.titulo}</h3>
 						<p>${postagem.chamada}</p>
 						<p>
 							<a href="${postagem.tags}/${postagem.idpostagem}"
@@ -40,7 +40,7 @@
 			</c:if>
 			<c:if test="${tagAberta == 1}">
 				<div class="span${postagem.tipo}">
-					<h1>${postagem.titulo}</h1>
+					<h3>${postagem.titulo}</h3>
 					<p>${postagem.chamada}</p>
 					<p>
 						<a href="${postagem.tags}/${postagem.idpostagem}"
@@ -63,7 +63,7 @@
 
 <c:if test="${empty conteudo}">
 	<div class="post_1">
-		<h1>Não existem posts para essa categoria</h1>
+		<h3>Não existem posts para essa categoria</h3>
 		<p>Tente entrar em outra categoria ou tente novamente mais tarde</p>
 	</div>
 </c:if>

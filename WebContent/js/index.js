@@ -33,6 +33,10 @@ $(document).ready(function(){
 		type : 'GET'
 	}).done(function(content) {
 		$('#novidade').html(content);
+		$('.carr').carousel({
+			interval : 10000,
+			pause : 'hover'
+		});
 	});
 	
 	$('.rota').livequery('click',function(){
@@ -74,5 +78,48 @@ $(document).ready(function(){
 		}).done(function(content) {
 			$('#section').html(content);
 		});
+	});
+	
+	$('#enviarEmail').livequery('click',function(){
+		var tipo=$('#tipo').val();
+		var nome=$('#nome').val();
+		var email=$('#email').val();
+		var mensagem=$('#mensagem').val();
+		
+		if(tipo != '' && nome != '' && email != '' && mensagem != ''){
+			$.ajax({
+				url : 'emmailContato',
+				cache : false,
+				type : 'POST',
+				data : {tipo:tipo,nome:nome,email:email,mensagem:mensagem}
+			}).success(function() {
+				alert('E-mail enviado com sucesso');
+			}).error(function(){
+				alert('Erro');
+			});
+		}else{
+			alert('Favor preencher todos os campos obrigatórios');
+		}
+	});
+	
+	$('#enviarComentario').livequery('click',function(){
+		var nome=$('#nomeComentario').val();
+		var email=$('#emailComentario').val();
+		var mensagem=$('#mensagemComentario').val();
+		
+		if(tipo != '' && nome != '' && email != '' && mensagem != ''){
+			$.ajax({
+				url : 'comentario',
+				cache : false,
+				type : 'POST',
+				data : {nome:nome,email:email,mensagem:mensagem}
+			}).success(function() {
+				alert('Comentario enviado para moderação');
+			}).error(function(){
+				alert('Erro');
+			});
+		}else{
+			alert('Favor preencher todos os campos obrigatórios');
+		}
 	});
 });

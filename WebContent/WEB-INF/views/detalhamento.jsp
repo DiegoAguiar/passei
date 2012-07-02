@@ -19,12 +19,19 @@
 	<c:forEach items="${post.comentarios}" var="comentario">
 		<div class="row-fluid">
 			<div class="span1"></div>
-			<div class="span10 well">			
-				<p>${comentario.nome}</p>
-				<p>${comentario.texto}</p>
+			<div class="span10">			
+				<p class="well"><b>${comentario.nome} :</b> ${comentario.texto}</p>
 			</div>
 		</div>
 	</c:forEach>
+	<c:if test="${empty post.comentarios}">
+		<div class="row-fluid">
+			<div class="span1"></div>
+			<div class="span10">			
+				<p class="well">Sem Comentários</p>
+			</div>
+		</div>
+	</c:if>
 
 </c:forEach>
 

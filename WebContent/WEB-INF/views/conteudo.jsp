@@ -18,7 +18,7 @@
 					<p>${postagem.chamada}</p>
 					<p>
 						<a href="${postagem.tags}/${postagem.idpostagem}"
-							class="detalhamento" data-id="${postagem.idpostagem}">Continue
+							class="detalhamento btn" data-id="${postagem.idpostagem}">Continue
 							Lendo</a>
 					</p>
 				</div>
@@ -32,7 +32,7 @@
 						<p>${postagem.chamada}</p>
 						<p>
 							<a href="${postagem.tags}/${postagem.idpostagem}"
-								class="detalhamento" data-id="${postagem.idpostagem}">Continue
+								class="detalhamento btn" data-id="${postagem.idpostagem}">Continue
 								Lendo</a>
 						</p>
 					</div>
@@ -44,7 +44,7 @@
 					<p>${postagem.chamada}</p>
 					<p>
 						<a href="${postagem.tags}/${postagem.idpostagem}"
-							class="detalhamento" data-id="${postagem.idpostagem}">Continue
+							class="detalhamento btn" data-id="${postagem.idpostagem}">Continue
 							Lendo</a>
 					</p>
 				</div>

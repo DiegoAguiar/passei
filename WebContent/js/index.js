@@ -77,6 +77,7 @@ $(document).ready(function(){
 			data : {idpostagem:self.attr('data-id')}
 		}).done(function(content) {
 			$('#section').html(content);
+			$('#enviarComentario').attr('data-id',self.attr('data-id'));
 		});
 	});
 	
@@ -103,16 +104,16 @@ $(document).ready(function(){
 	});
 	
 	$('#enviarComentario').livequery('click',function(){
+		var idpostagem=$(this).attr('data-id');
 		var nome=$('#nomeComentario').val();
 		var email=$('#emailComentario').val();
 		var mensagem=$('#mensagemComentario').val();
-		
-		if(tipo != '' && nome != '' && email != '' && mensagem != ''){
+		if(idpostagem != '' && nome != '' && email != '' && mensagem != ''){
 			$.ajax({
 				url : 'comentario',
 				cache : false,
 				type : 'POST',
-				data : {nome:nome,email:email,mensagem:mensagem}
+				data : {idpostagem:idpostagem,nome:nome,email:email,mensagem:mensagem}
 			}).success(function() {
 				alert('Comentario enviado para moderação');
 			}).error(function(){

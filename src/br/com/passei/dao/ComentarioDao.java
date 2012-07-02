@@ -1,6 +1,7 @@
 package br.com.passei.dao;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -29,7 +30,29 @@ public class ComentarioDao {
 						res.getDate("data"));
 				comentarios.add(comentario);
 			}
+			con.close();
 			return comentarios;
+		} catch (SQLException e) {
+			throw new SQLException(e);
+		}
+
+	}
+
+	public void insereNovoComentario(int idpostagem, String nome, String email,
+			String texto) throws SQLException, ClassNotFoundException {
+		try {
+			Connection con = new ConnectionFactory().getConnection();
+			String query = "insert into comentario (nome,email,texto,data,idpostagem,moderado) values (?,?,?,?,?,?)";
+			PreparedStatement smtp = (PreparedStatement) con
+					.prepareStatement(query);
+			smtp.setString(1, nome);
+			smtp.setString(2, email);
+			smtp.setString(3, texto);
+			Date data = new Date(System.currentTimeMillis());
+			smtp.setDate(4, data);
+			smtp.setInt(5, idpostagem);
+			smtp.setInt(6, 0);
+			smtp.execute();
 		} catch (SQLException e) {
 			throw new SQLException(e);
 		}

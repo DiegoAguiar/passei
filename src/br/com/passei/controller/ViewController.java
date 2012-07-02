@@ -16,7 +16,7 @@ import br.com.passei.main.Postagem;
 
 @Controller
 public class ViewController {
-	@RequestMapping("/")
+	@RequestMapping("/*")
 	public String execute() {
 		return "index";
 	}

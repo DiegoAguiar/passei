@@ -108,4 +108,27 @@ public class PostagemDao {
 			throw new SQLException(e);
 		}
 	}
+	
+	public ArrayList<Postagem> getBuscaPostagem(String busca) throws ClassNotFoundException, SQLException {
+		ArrayList<Postagem> postagens = new ArrayList<Postagem>();
+		try {
+			Connection con = new ConnectionFactory().getConnection();
+			String query = "select * from postagem where tags like ('%"+busca+"%') or titulo like ('%"+busca+"%') order by idpostagem desc";
+			PreparedStatement smtp = (PreparedStatement) con
+					.prepareStatement(query);
+			ResultSet res = smtp.executeQuery();
+			while (res.next()) {
+				Postagem postagem = new Postagem(res.getString("titulo"),
+						res.getString("texto"), res.getString("tags"),
+						res.getInt("tipo"), res.getInt("idusuario"),
+						res.getInt("idpostagem"), res.getDate("data"));
+				postagens.add(postagem);
+			}
+			con.close();
+			return postagens;
+		} catch (SQLException e) {
+			throw new SQLException(e);
+		}
+
+	}
 }

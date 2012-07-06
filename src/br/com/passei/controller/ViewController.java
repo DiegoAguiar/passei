@@ -5,7 +5,9 @@ import java.util.ArrayList;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import br.com.passei.dao.ComentarioDao;
@@ -16,7 +18,7 @@ import br.com.passei.main.Postagem;
 
 @Controller
 public class ViewController {
-	@RequestMapping("/*")
+	@RequestMapping("/")
 	public String execute() {
 		return "index";
 	}
@@ -75,9 +77,29 @@ public class ViewController {
 	@RequestMapping("/comentario")
 	public String executaComentario(Model model, @RequestParam int idpostagem,
 			@RequestParam String nome, @RequestParam String email,
-			@RequestParam String mensagem) throws SQLException, ClassNotFoundException {
+			@RequestParam String mensagem) throws SQLException,
+			ClassNotFoundException {
 		ComentarioDao dao = new ComentarioDao();
 		dao.insereNovoComentario(idpostagem, nome, email, mensagem);
 		return "index";
 	}
+
+	@RequestMapping(value = "/navegacao/{modulo}/{submodulo}", method = RequestMethod.GET)
+	public String executaBusca(@PathVariable(value = "modulo") String modulo,
+			@PathVariable(value = "submodulo") String submodulo, Model model) throws ClassNotFoundException, SQLException {
+		PostagemDao dao = new PostagemDao();
+		ArrayList<Postagem> conteudo = dao.getAllPostagemPorAssunto('#'+modulo+'/'+submodulo);
+		model.addAttribute("conteudo", conteudo);
+		System.out.println("teste");
+		return "indexFavoritosConteudo";
+	}
+	
+	@RequestMapping("/buscar")
+	public String executaBusca(@RequestParam String busca, Model model) throws ClassNotFoundException, SQLException{
+		PostagemDao dao = new PostagemDao();
+		ArrayList<Postagem> resultado = dao.getBuscaPostagem(busca);
+		model.addAttribute("conteudo",resultado);
+		return "conteudo";
+	}
+
 }

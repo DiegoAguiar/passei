@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$.ajax({
-		url : 'caroussel',
+		url : '/passei/caroussel',
 		cache : false,
 		type : 'GET'
 	}).done(function(content) {
@@ -12,23 +12,16 @@ $(document).ready(function(){
 	});
 	
 	$.ajax({
-		url : 'lMenu',
+		url : '/passei/lMenu',
 		cache : false,
 		type : 'GET'
 	}).done(function(content) {
 		$('#lmenu').html(content);
 	});
 	
-	$.ajax({
-		url : 'conteudoHome',
-		cache : false,
-		type : 'GET'
-	}).done(function(content) {
-		$('#section').html(content);
-	});
 	
 	$.ajax({
-		url : 'novidades',
+		url : '/passei/novidades',
 		cache : false,
 		type : 'GET'
 	}).done(function(content) {
@@ -42,7 +35,7 @@ $(document).ready(function(){
 	$('.rota').livequery('click',function(){
 		var self = $(this);
 		$.ajax({
-			url : 'conteudo',
+			url : '/passei/conteudo',
 			cache : false,
 			type : 'GET',
 			data : {assunto:$(this).attr('href')}
@@ -57,7 +50,7 @@ $(document).ready(function(){
 	
 	$('.home').livequery('click',function(){
 		$.ajax({
-			url : 'conteudoHome',
+			url : '/passei/conteudoHome',
 			cache : false,
 			type : 'GET'
 		}).done(function(content) {
@@ -71,7 +64,7 @@ $(document).ready(function(){
 	$('.detalhamento').livequery('click',function(){
 		var self=$(this);
 		$.ajax({
-			url : 'detalhamento',
+			url : '/passei/detalhamento',
 			cache : false,
 			type : 'GET',
 			data : {idpostagem:self.attr('data-id')}
@@ -89,7 +82,7 @@ $(document).ready(function(){
 		
 		if(tipo != '' && nome != '' && email != '' && mensagem != ''){
 			$.ajax({
-				url : 'emmailContato',
+				url : '/passei/emmailContato',
 				cache : false,
 				type : 'POST',
 				data : {tipo:tipo,nome:nome,email:email,mensagem:mensagem}
@@ -99,24 +92,7 @@ $(document).ready(function(){
 				alert('Erro');
 			});
 		}else{
-			alert('Favor preencher todos os campos obrigatórios');
-		}
-	});
-	
-	$('#busca').keypress(function(event){
-		if(event.keyCode == 13){
-			var busca = $(this).val();
-			$.ajax({
-				url : 'buscar',
-				cache : false,
-				type : 'GET',
-				data : {busca:busca}
-			}).success(function(content) {
-				$('#section').html(content);
-			}).error(function(){
-				alert('Erro');
-			});
-			event.preventDefault();
+			alert('Favor preencher todos os campos obrigatÃ³rios');
 		}
 	});
 	
@@ -127,17 +103,17 @@ $(document).ready(function(){
 		var mensagem=$('#mensagemComentario').val();
 		if(idpostagem != '' && nome != '' && email != '' && mensagem != ''){
 			$.ajax({
-				url : 'comentario',
+				url : '/passei/comentario',
 				cache : false,
 				type : 'POST',
 				data : {idpostagem:idpostagem,nome:nome,email:email,mensagem:mensagem}
 			}).success(function() {
-				alert('Comentario enviado para moderação');
+				alert('Comentario enviado para moderaÃ§Ã£o');
 			}).error(function(){
 				alert('Erro');
 			});
 		}else{
-			alert('Favor preencher todos os campos obrigatórios');
+			alert('Favor preencher todos os campos obrigatÃ³rios');
 		}
 	});
 });

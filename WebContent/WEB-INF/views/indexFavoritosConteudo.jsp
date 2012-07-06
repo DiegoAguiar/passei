@@ -8,10 +8,10 @@
 <meta name="author" content="Diego Almeida de Aguiar">
 
 <!-- Le styles -->
-<link href="bootstrap/docs/assets/css/bootstrap.css" rel="stylesheet">
-<link href="bootstrap/docs/assets/css/bootstrap-responsive.css"
+<link href="/passei/bootstrap/docs/assets/css/bootstrap.css" rel="stylesheet">
+<link href="/passei/bootstrap/docs/assets/css/bootstrap-responsive.css"
 	rel="stylesheet">
-<link href="css/index.css" rel="stylesheet">
+<link href="/passei/css/index.css" rel="stylesheet">
 
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -19,7 +19,7 @@
     <![endif]-->
 
 <!-- Le fav and touch icons -->
-<link rel="shortcut icon" href="images/favicon.png">
+<link rel="shortcut icon" href="/passei/images/favicon.png">
 <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144"
 	href="bootstrap/docs/assets/ico/apple-touch-icon-144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114"
@@ -28,8 +28,7 @@
 	href="bootstrap/docs/assets/ico/apple-touch-icon-72-precomposed.png">
 <link rel="apple-touch-icon-precomposed"
 	href="bootstrap/docs/assets/ico/apple-touch-icon-57-precomposed.png">
- -->
-</head>
+ --></head>
 
 <body>
 	<header class="home">
@@ -39,9 +38,8 @@
 					<div class="container">
 						<div class="nav-collapse">
 							<form class="navbar-search pull-right" action="">
-								<input type="text" id="busca" class="search-query span12"
-									placeholder="Buscar" data-provide="typeahead" data-items="10"
-									data-source="[&quot;Turismo&quot;,&quot;Estágios&quot;,&quot;Eventos&quot;,&quot;Vestibular&quot;,&quot;Republica&quot;,&quot;Bolsa de Estudos&quot;,&quot;Comportamento&quot;,&quot;Serviços&quot;,&quot;Economia&quot;,&quot;Casts&quot;,&quot;Universidades&quot;,&quot;Cursos Extra Curriculares&quot;]">
+								<input type="text" class="search-query span12"
+									placeholder="Buscar">
 							</form>
 						</div>
 						<a class="brand" href="#">Home</a>
@@ -89,25 +87,27 @@
 		<div class="modal-body">
 			<form action="formulario">
 				<div class="row-fluid">
-					<label>Tipo:*</label> <select name="tipo" id="tipo" class="span7">
+					<label>Tipo:*</label>
+					<select name="tipo" id="tipo" class="span7">
 						<optgroup label="Outros">
 							<option value="outros">Outros</option>
 						</optgroup>
-					</select> <label>Nome:*</label> <input type="text" name="nome" id="nome"
-						maxlength="255" placeholder="Nome" class="span7"> <label>E-mail:*</label>
-					<input type="text" name="email" id="email" maxlength="255"
-						placeholder="E-mail" class="span7"> <label>Mensagem:*</label>
-					<textarea name="mensagem" rows="5" id="mensagem"
-						placeholder="Mensagem" class="span7"></textarea>
+					</select>
+					<label>Nome:*</label>
+					<input type="text" name="nome" id="nome" maxlength="255" placeholder="Nome" class="span7">
+					<label>E-mail:*</label>
+					<input type="text" name="email" id="email" maxlength="255" placeholder="E-mail" class="span7">
+					<label>Mensagem:*</label>
+					<textarea name="mensagem" rows="5" id="mensagem" placeholder="Mensagem" class="span7"></textarea>
 				</div>
 			</form>
 		</div>
 		<div class="modal-footer">
-			<a href="#" class="btn" data-dismiss="modal">Fechar</a> <a href="#"
-				class="btn btn-primary" id="enviarEmail">Enviar</a>
+			<a href="#" class="btn" data-dismiss="modal">Fechar</a>
+			<a href="#" class="btn btn-primary" id="enviarEmail">Enviar</a>
 		</div>
 	</div>
-
+	
 	<div class="modal hide" id="comentario">
 		<div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal">X</button>
@@ -116,39 +116,38 @@
 		<div class="modal-body">
 			<form action="formulario">
 				<div class="row-fluid">
-					<label>Nome:*</label> <input type="text" name="nome"
-						id="nomeComentario" maxlength="255" placeholder="Nome"
-						class="span7"> <label>E-mail:*</label> <input type="text"
-						name="email" id="emailComentario" maxlength="255"
-						placeholder="E-mail" class="span7"> <label>Comentário:*</label>
-					<textarea name="mensagem" rows="5" id="mensagemComentario"
-						placeholder="Comentário" class="span7"></textarea>
+					<label>Nome:*</label>
+					<input type="text" name="nome" id="nomeComentario" maxlength="255" placeholder="Nome" class="span7">
+					<label>E-mail:*</label>
+					<input type="text" name="email" id="emailComentario" maxlength="255" placeholder="E-mail" class="span7">
+					<label>Comentário:*</label>
+					<textarea name="mensagem" rows="5" id="mensagemComentario" placeholder="Comentário" class="span7"></textarea>
 				</div>
 			</form>
 		</div>
 		<div class="modal-footer">
-			<a href="#" class="btn" data-dismiss="modal">Cancelar</a> <a href="#"
-				class="btn btn-primary" id="enviarComentario">Enviar</a>
+			<a href="#" class="btn" data-dismiss="modal">Cancelar</a>
+			<a href="#" class="btn btn-primary" id="enviarComentario">Enviar</a>
 		</div>
 	</div>
 
 	<!-- Le javascript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="bootstrap/docs/assets/js/jquery.js"></script>
-	<script src="js/jquery.livequery.js"></script>
-	<script src="bootstrap/docs/assets/js/bootstrap-transition.js"></script>
-	<script src="bootstrap/docs/assets/js/bootstrap-alert.js"></script>
-	<script src="bootstrap/docs/assets/js/bootstrap-modal.js"></script>
-	<script src="bootstrap/docs/assets/js/bootstrap-dropdown.js"></script>
-	<script src="bootstrap/docs/assets/js/bootstrap-scrollspy.js"></script>
-	<script src="bootstrap/docs/assets/js/bootstrap-tab.js"></script>
-	<script src="bootstrap/docs/assets/js/bootstrap-tooltip.js"></script>
-	<script src="bootstrap/docs/assets/js/bootstrap-popover.js"></script>
-	<script src="bootstrap/docs/assets/js/bootstrap-button.js"></script>
-	<script src="bootstrap/docs/assets/js/bootstrap-collapse.js"></script>
-	<script src="bootstrap/docs/assets/js/bootstrap-carousel.js"></script>
-	<script src="bootstrap/docs/assets/js/bootstrap-typeahead.js"></script>
-	<script src="js/index.js"></script>
+	<script src="/passei/bootstrap/docs/assets/js/jquery.js"></script>
+	<script src="/passei/js/jquery.livequery.js"></script>
+	<script src="/passei/bootstrap/docs/assets/js/bootstrap-transition.js"></script>
+	<script src="/passei/bootstrap/docs/assets/js/bootstrap-alert.js"></script>
+	<script src="/passei/bootstrap/docs/assets/js/bootstrap-modal.js"></script>
+	<script src="/passei/bootstrap/docs/assets/js/bootstrap-dropdown.js"></script>
+	<script src="/passei/bootstrap/docs/assets/js/bootstrap-scrollspy.js"></script>
+	<script src="/passei/bootstrap/docs/assets/js/bootstrap-tab.js"></script>
+	<script src="/passei/bootstrap/docs/assets/js/bootstrap-tooltip.js"></script>
+	<script src="/passei/bootstrap/docs/assets/js/bootstrap-popover.js"></script>
+	<script src="/passei/bootstrap/docs/assets/js/bootstrap-button.js"></script>
+	<script src="/passei/bootstrap/docs/assets/js/bootstrap-collapse.js"></script>
+	<script src="/passei/bootstrap/docs/assets/js/bootstrap-carousel.js"></script>
+	<script src="/passei/bootstrap/docs/assets/js/bootstrap-typeahead.js"></script>
+	<script src="/passei/js/indexFavoritosConteudo.js"></script>
 </body>
 </html>

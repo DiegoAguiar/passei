@@ -4,7 +4,7 @@
 <div id="Carousel" class="carousel slide span8 well">
 	<div class="carousel-inner">
 		<div class="item active">
-			<img src="images/Banner.gif" alt="">
+			<img src="/passei/images/Banner.gif" alt="">
 			<div class="carousel-caption">
 				<h4>Passei.com</h4>
 				<p>Seu portal universitário de prestigio.</p>
